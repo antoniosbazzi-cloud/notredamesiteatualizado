@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { MessageCircle, Shield, Star, Phone, CheckCircle, Award } from "lucide-react"
 import Link from "next/link"
 import CartaPermanenciaInfo from "@/components/carta-permanencia-info"
-import ConversionPopup from "@/components/conversion-popup"
+import NotreDameUpdatePopup from "@/components/github-update-popup"
 
 export default function HapvidaNotreDameLanding() {
   const whatsappNumber = "5511977367924"
@@ -11,7 +11,7 @@ export default function HapvidaNotreDameLanding() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
-      <ConversionPopup />
+      <NotreDameUpdatePopup />
 
       {/* Hero Section */}
       <section className="pt-12 pb-12 px-4">
@@ -35,7 +35,8 @@ export default function HapvidaNotreDameLanding() {
             </div>
           </div>
 
-          <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+          {/* Título principal */}
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
             <span className="text-primary">HAPVIDA NOTREDAME</span>
             <br />O melhor{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -67,6 +68,10 @@ export default function HapvidaNotreDameLanding() {
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4" />
+                    <span className="text-sm">Sem carência</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="h-4 w-4" />
                     <span className="text-sm">Atendimento 24h</span>
                   </div>
                 </div>
@@ -80,9 +85,9 @@ export default function HapvidaNotreDameLanding() {
             >
               <Button
                 size="lg"
-                className="bg-white text-primary hover:bg-gray-100 text-lg px-12 py-6 rounded-full shadow-2xl font-bold"
+                className="bg-white text-primary hover:bg-gray-100 text-lg px-16 py-8 rounded-full shadow-2xl font-bold"
               >
-                <MessageCircle className="h-6 w-6 mr-3" />
+                <MessageCircle className="h-8 w-8 mr-4" />
                 SOLICITAR COTAÇÃO GRATUITA
               </Button>
             </Link>
@@ -167,7 +172,7 @@ export default function HapvidaNotreDameLanding() {
             </div>
 
             <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-6 mb-8 text-white">
-              <h3 className="text-xl font-bold mb-4">Benefícios Exclusivos</h3>
+              <h3 className="text-2xl font-bold mb-4">Benefícios Exclusivos</h3>
               <div className="grid md:grid-cols-2 gap-4 text-left">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 flex-shrink-0" />
@@ -195,9 +200,9 @@ export default function HapvidaNotreDameLanding() {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary to-secondary hover:from-blue-700 hover:to-orange-600 text-white text-lg px-10 py-5 rounded-full shadow-xl font-bold"
+                className="bg-gradient-to-r from-primary to-secondary hover:from-blue-700 hover:to-orange-600 text-white text-lg px-12 py-6 rounded-full shadow-xl font-bold"
               >
-                <MessageCircle className="h-5 w-5 mr-3" />
+                <MessageCircle className="h-6 w-6 mr-3" />
                 SOLICITAR COTAÇÃO GRATUITA
               </Button>
             </Link>
@@ -221,7 +226,7 @@ export default function HapvidaNotreDameLanding() {
               { name: "Maria Silva", text: "Consegui 50% de desconto e estou economizando R$ 150 por mês!", rating: 5 },
               { name: "João Santos", text: "Atendimento excelente e aprovação super rápida!", rating: 5 },
               { name: "Ana Costa", text: "Melhor plano que já tive, recomendo para todos!", rating: 5 },
-              { name: "Carlos Lima", text: "Posso usar imediatamente. Perfeito!", rating: 5 },
+              { name: "Carlos Lima", text: "Sem carência e posso usar imediatamente. Perfeito!", rating: 5 },
               {
                 name: "Lucia Ferreira",
                 text: "Rede médica incrível, encontro especialista em qualquer lugar!",
@@ -260,7 +265,7 @@ export default function HapvidaNotreDameLanding() {
 
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-3">Posso usar imediatamente?</h3>
-              <p className="text-gray-600">Sim! Para consultas, exames e emergências.</p>
+              <p className="text-gray-600">Sim! Sem carência para consultas, exames e emergências.</p>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6">
@@ -294,9 +299,9 @@ export default function HapvidaNotreDameLanding() {
             >
               <Button
                 size="lg"
-                className="bg-white text-primary hover:bg-gray-100 text-lg px-10 py-5 rounded-full shadow-xl font-bold"
+                className="bg-white text-primary hover:bg-gray-100 text-lg px-12 py-6 rounded-full shadow-xl font-bold"
               >
-                <MessageCircle className="h-5 w-5 mr-3" />
+                <MessageCircle className="h-6 w-6 mr-3" />
                 FALAR NO WHATSAPP
               </Button>
             </Link>
@@ -305,9 +310,9 @@ export default function HapvidaNotreDameLanding() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-10 py-5 rounded-full shadow-xl bg-transparent font-bold"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-12 py-6 rounded-full shadow-xl bg-transparent font-bold"
               >
-                <Phone className="h-5 w-5 mr-3" />
+                <Phone className="h-6 w-6 mr-3" />
                 LIGAR AGORA
               </Button>
             </Link>
