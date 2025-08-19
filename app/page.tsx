@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { MessageCircle, Shield, Star, Phone, CheckCircle, Award } from "lucide-react"
 import Link from "next/link"
 import CartaPermanenciaInfo from "@/components/carta-permanencia-info"
+import ConversionPopup from "@/components/conversion-popup"
 
 export default function HapvidaNotreDameLanding() {
   const whatsappNumber = "5511977367924"
@@ -10,6 +11,8 @@ export default function HapvidaNotreDameLanding() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">
+      <ConversionPopup />
+
       {/* Hero Section */}
       <section className="pt-12 pb-12 px-4">
         <div className="container mx-auto text-center max-w-5xl">
@@ -32,8 +35,7 @@ export default function HapvidaNotreDameLanding() {
             </div>
           </div>
 
-          {/* Título principal */}
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
             <span className="text-primary">HAPVIDA NOTREDAME</span>
             <br />O melhor{" "}
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
@@ -42,18 +44,18 @@ export default function HapvidaNotreDameLanding() {
             do Brasil
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 font-semibold">
+          <p className="text-lg md:text-xl text-gray-700 mb-8 font-semibold">
             Cobertura nacional completa com a <strong className="text-primary">maior rede credenciada</strong> do país
           </p>
 
           {/* Oferta principal */}
           <div className="bg-gradient-to-r from-primary to-secondary text-white rounded-3xl p-8 mb-12 shadow-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">💙 COTAÇÃO GRATUITA</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">💙 COTAÇÃO GRATUITA</h2>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-white/10 rounded-xl p-6">
                 <p className="text-lg">Planos a partir de:</p>
-                <p className="text-4xl font-bold">R$ 149,90/mês</p>
+                <p className="text-3xl font-bold">R$ 149,90/mês</p>
                 <p className="text-blue-200">Condições especiais disponíveis</p>
               </div>
               <div className="bg-white/10 rounded-xl p-6">
@@ -62,10 +64,6 @@ export default function HapvidaNotreDameLanding() {
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4" />
                     <span className="text-sm">Cobertura nacional</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="h-4 w-4" />
-                    <span className="text-sm">Sem carência</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="h-4 w-4" />
@@ -82,9 +80,9 @@ export default function HapvidaNotreDameLanding() {
             >
               <Button
                 size="lg"
-                className="bg-white text-primary hover:bg-gray-100 text-2xl px-16 py-8 rounded-full shadow-2xl font-bold"
+                className="bg-white text-primary hover:bg-gray-100 text-lg px-12 py-6 rounded-full shadow-2xl font-bold"
               >
-                <MessageCircle className="h-8 w-8 mr-4" />
+                <MessageCircle className="h-6 w-6 mr-3" />
                 SOLICITAR COTAÇÃO GRATUITA
               </Button>
             </Link>
@@ -99,7 +97,7 @@ export default function HapvidaNotreDameLanding() {
       {/* Seção de benefícios */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-12">
             Por que escolher <span className="text-primary">Hapvida NotreDame?</span>
           </h2>
 
@@ -145,11 +143,11 @@ export default function HapvidaNotreDameLanding() {
               </div>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
               Hapvida NotreDame: <span className="text-primary">Líder em Saúde</span>
             </h2>
 
-            <p className="text-xl text-gray-700 mb-8">
+            <p className="text-lg text-gray-700 mb-8">
               Junte-se a milhões de brasileiros que confiam na maior rede de saúde do país
             </p>
 
@@ -169,7 +167,7 @@ export default function HapvidaNotreDameLanding() {
             </div>
 
             <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-6 mb-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Benefícios Exclusivos</h3>
+              <h3 className="text-xl font-bold mb-4">Benefícios Exclusivos</h3>
               <div className="grid md:grid-cols-2 gap-4 text-left">
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="h-5 w-5 flex-shrink-0" />
@@ -197,9 +195,9 @@ export default function HapvidaNotreDameLanding() {
             >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary to-secondary hover:from-blue-700 hover:to-orange-600 text-white text-xl px-12 py-6 rounded-full shadow-xl font-bold"
+                className="bg-gradient-to-r from-primary to-secondary hover:from-blue-700 hover:to-orange-600 text-white text-lg px-10 py-5 rounded-full shadow-xl font-bold"
               >
-                <MessageCircle className="h-6 w-6 mr-3" />
+                <MessageCircle className="h-5 w-5 mr-3" />
                 SOLICITAR COTAÇÃO GRATUITA
               </Button>
             </Link>
@@ -214,7 +212,7 @@ export default function HapvidaNotreDameLanding() {
       {/* Depoimentos */}
       <section className="py-16 px-4 bg-gradient-to-r from-green-50 to-blue-50">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-12">
             Mais de <span className="text-primary">50.000 clientes</span> satisfeitos
           </h2>
 
@@ -223,7 +221,7 @@ export default function HapvidaNotreDameLanding() {
               { name: "Maria Silva", text: "Consegui 50% de desconto e estou economizando R$ 150 por mês!", rating: 5 },
               { name: "João Santos", text: "Atendimento excelente e aprovação super rápida!", rating: 5 },
               { name: "Ana Costa", text: "Melhor plano que já tive, recomendo para todos!", rating: 5 },
-              { name: "Carlos Lima", text: "Sem carência e posso usar imediatamente. Perfeito!", rating: 5 },
+              { name: "Carlos Lima", text: "Posso usar imediatamente. Perfeito!", rating: 5 },
               {
                 name: "Lucia Ferreira",
                 text: "Rede médica incrível, encontro especialista em qualquer lugar!",
@@ -250,7 +248,7 @@ export default function HapvidaNotreDameLanding() {
       {/* FAQ rápido */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Dúvidas Frequentes</h2>
+          <h2 className="text-2xl font-bold text-center text-gray-900 mb-12">Dúvidas Frequentes</h2>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gray-50 rounded-xl p-6">
@@ -262,7 +260,7 @@ export default function HapvidaNotreDameLanding() {
 
             <div className="bg-gray-50 rounded-xl p-6">
               <h3 className="text-lg font-bold text-gray-900 mb-3">Posso usar imediatamente?</h3>
-              <p className="text-gray-600">Sim! Sem carência para consultas, exames e emergências.</p>
+              <p className="text-gray-600">Sim! Para consultas, exames e emergências.</p>
             </div>
 
             <div className="bg-gray-50 rounded-xl p-6">
@@ -281,8 +279,8 @@ export default function HapvidaNotreDameLanding() {
       {/* CTA Final */}
       <section className="py-16 px-4 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="container mx-auto text-center max-w-4xl">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">FALE CONOSCO AGORA!</h2>
-          <p className="text-xl md:text-2xl mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6">FALE CONOSCO AGORA!</h2>
+          <p className="text-lg md:text-xl mb-8">
             Descubra o plano ideal para você e sua família.
             <br />
             <strong>Atendimento especializado e personalizado!</strong>
@@ -296,9 +294,9 @@ export default function HapvidaNotreDameLanding() {
             >
               <Button
                 size="lg"
-                className="bg-white text-primary hover:bg-gray-100 text-xl px-12 py-6 rounded-full shadow-xl font-bold"
+                className="bg-white text-primary hover:bg-gray-100 text-lg px-10 py-5 rounded-full shadow-xl font-bold"
               >
-                <MessageCircle className="h-6 w-6 mr-3" />
+                <MessageCircle className="h-5 w-5 mr-3" />
                 FALAR NO WHATSAPP
               </Button>
             </Link>
@@ -307,9 +305,9 @@ export default function HapvidaNotreDameLanding() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-primary text-xl px-12 py-6 rounded-full shadow-xl bg-transparent font-bold"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-10 py-5 rounded-full shadow-xl bg-transparent font-bold"
               >
-                <Phone className="h-6 w-6 mr-3" />
+                <Phone className="h-5 w-5 mr-3" />
                 LIGAR AGORA
               </Button>
             </Link>
