@@ -1,0 +1,253 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Aplicando cores oficiais da Hapvida NotreDame */
+  --background: #ffffff; /* Pure White para fundos limpos */
+  --foreground: #1f2937; /* Dark Gray para texto primário */
+  --card: #f8fafc; /* Light Gray para fundos de cards */
+  --card-foreground: #1f2937; /* Dark Gray para texto de cards */
+  --popover: #ffffff; /* White para popovers */
+  --popover-foreground: #1f2937; /* Dark Gray para texto de popover */
+  --primary: #1e40af; /* Azul oficial Hapvida para ações primárias */
+  --primary-foreground: #ffffff; /* White text em botões primários */
+  --secondary: #ea580c; /* Laranja oficial NotreDame para ações secundárias */
+  --secondary-foreground: #ffffff; /* White para texto secundário */
+  --muted: #f1f5f9; /* Light Gray para texto muted */
+  --muted-foreground: #64748b; /* Medium Gray para texto muted */
+  --accent: #ea580c; /* Laranja NotreDame para acentos */
+  --accent-foreground: #ffffff; /* White para texto de accent */
+  --destructive: #dc2626; /* Red para urgência */
+  --destructive-foreground: #ffffff; /* White text em ações destrutivas */
+  --border: #e2e8f0; /* Light Gray para bordas */
+  --input: #ffffff; /* White para campos de input */
+  --ring: rgba(30, 64, 175, 0.2); /* Subtle blue ring para focus states */
+  --chart-1: #1e40af; /* Azul Hapvida para gráficos */
+  --chart-2: #ea580c; /* Laranja NotreDame para gráficos */
+  --chart-3: #059669; /* Verde saúde para gráficos */
+  --chart-4: #f1f5f9; /* Light Gray para gráficos */
+  --chart-5: #64748b; /* Medium Gray para gráficos */
+  --radius: 0.5rem;
+  --sidebar: #f8fafc; /* Light Gray para sidebar */
+  --sidebar-foreground: #1f2937; /* Dark Gray para texto de sidebar */
+  --sidebar-primary: #1e40af; /* Azul Hapvida para ações primárias de sidebar */
+  --sidebar-primary-foreground: #ffffff; /* White text em ações primárias de sidebar */
+  --sidebar-accent: #ea580c; /* Laranja NotreDame para acentos de sidebar */
+  --sidebar-accent-foreground: #ffffff; /* White para texto de accent de sidebar */
+  --sidebar-border: #e2e8f0; /* Light Gray para bordas de sidebar */
+  --sidebar-ring: rgba(30, 64, 175, 0.2); /* Subtle blue ring para focus states de sidebar */
+}
+
+.dark {
+  /* Modo escuro com cores oficiais ajustadas */
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card: #1e293b;
+  --card-foreground: #f1f5f9;
+  --popover: #1e293b;
+  --popover-foreground: #f1f5f9;
+  --primary: #3b82f6; /* Azul mais claro para modo escuro */
+  --primary-foreground: #0f172a;
+  --secondary: #f97316; /* Laranja mais claro para modo escuro */
+  --secondary-foreground: #0f172a;
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+  --accent: #f97316; /* Laranja ajustado para modo escuro */
+  --accent-foreground: #0f172a;
+  --destructive: #ef4444;
+  --destructive-foreground: #f1f5f9;
+  --border: #334155;
+  --input: #334155;
+  --ring: rgba(59, 130, 246, 0.3);
+  --chart-1: #3b82f6;
+  --chart-2: #f97316;
+  --chart-3: #10b981;
+  --chart-4: #94a3b8;
+  --chart-5: #0f172a;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f1f5f9;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #0f172a;
+  --sidebar-accent: #f97316;
+  --sidebar-accent-foreground: #0f172a;
+  --sidebar-border: #334155;
+  --sidebar-ring: rgba(59, 130, 246, 0.3);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Adicionando configuração de fontes premium */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Removido todas as animações CSS e classes de animação para deixar o site estático */
+
+  /* Sistema tipográfico premium com hierarquia clara - sem animações */
+  .text-display {
+    @apply font-serif font-black text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight;
+    background: linear-gradient(135deg, #1e40af 0%, #ea580c 50%, #1e40af 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 4px 8px rgba(30, 64, 175, 0.2);
+  }
+
+  .text-headline {
+    @apply font-serif font-bold text-3xl md:text-5xl lg:text-6xl leading-tight tracking-tight;
+    background: linear-gradient(135deg, #1e40af 0%, #ea580c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 4px rgba(30, 64, 175, 0.15);
+  }
+
+  .text-title {
+    @apply font-serif font-semibold text-2xl md:text-3xl lg:text-4xl leading-snug tracking-tight;
+    color: #1f2937;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-subtitle {
+    @apply font-sans font-medium text-lg md:text-xl lg:text-2xl leading-relaxed;
+    color: #64748b;
+    letter-spacing: -0.025em;
+  }
+
+  .text-body-large {
+    @apply font-sans font-normal text-lg leading-relaxed;
+    color: #374151;
+    letter-spacing: -0.01em;
+  }
+
+  .text-body {
+    @apply font-sans font-normal text-base leading-relaxed;
+    color: #374151;
+  }
+
+  .text-caption {
+    @apply font-sans font-medium text-sm leading-normal;
+    color: #6b7280;
+    letter-spacing: 0.025em;
+  }
+
+  /* Efeitos tipográficos especiais - sem animações */
+  .text-shimmer {
+    background: linear-gradient(90deg, #1e40af 0%, #ea580c 50%, #1e40af 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-glow {
+    color: #ea580c;
+    text-shadow: 0 0 10px rgba(234, 88, 12, 0.5), 0 0 20px rgba(234, 88, 12, 0.3);
+  }
+
+  .text-premium {
+    @apply font-serif font-bold;
+    background: linear-gradient(135deg, #fbbf24 0%, #ea580c 50%, #dc2626 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 2px 4px rgba(234, 88, 12, 0.3));
+  }
+}
+
+/* Estilos para elementos de urgência - sem animações */
+.urgent-banner {
+  background: linear-gradient(45deg, #dc2626, #ef4444);
+}
+
+.premium-card {
+  /* Card premium com cores da marca */
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  border: 2px solid #ea580c;
+  box-shadow: 0 10px 30px rgba(30, 64, 175, 0.1);
+}
+
+.conversion-button {
+  /* Botão de conversão com azul Hapvida */
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+}
+
+.conversion-button:hover {
+  box-shadow: 0 10px 25px rgba(30, 64, 175, 0.4);
+}
+
+.gold-accent {
+  /* Acento laranja NotreDame */
+  color: #ea580c;
+  text-shadow: 0 2px 4px rgba(234, 88, 12, 0.3);
+}
+
+/* Melhorias de acessibilidade e contraste */
+.high-contrast {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* Responsividade aprimorada */
+@media (max-width: 768px) {
+  /* Ajustes tipográficos para mobile */
+  .text-display {
+    @apply text-4xl md:text-6xl;
+  }
+
+  .text-headline {
+    @apply text-2xl md:text-4xl;
+  }
+
+  .text-title {
+    @apply text-xl md:text-2xl;
+  }
+}
